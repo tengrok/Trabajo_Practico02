@@ -50,10 +50,10 @@ public class Efemeride {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("\nCodigo").append(getCodigo());
-		sb.append("\nMes").append(getMeses());
-		sb.append("\nDia").append(getDia());
-		sb.append("\nDetalle").append(getDetalle());
+		sb.append("\nCodigo: ").append(getCodigo());
+		sb.append("\nMes: ").append(getMeses());
+		sb.append("\nDia: ").append(getDia());
+		sb.append("\nDetalle: ").append(getDetalle());
 		return sb.toString();
 	}
 	
