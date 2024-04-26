@@ -32,7 +32,7 @@ public class Main {
 	
 	public static int menu() {
 		int respuesta;
-			System.out.println("1_ Crear Producto: ");
+			System.out.println("\n1_ Crear Producto: ");
 			System.out.println("2_ Motrar Producto: ");
 			System.out.println("3_ Modificar Producto: ");
 			System.out.println("4_ Salir: ");
@@ -84,7 +84,7 @@ public class Main {
 		double precio = validar("Ingrese el precio unitario: ");
 		int numero = menuCategoria();
 		switch (numero) {
-			case 1: cat = categoriaProducto.TELEFONO; break;
+			case 1: cat = categoriaProducto.TELEFONIA; break;
 			case 2: cat = categoriaProducto.INFORMATICA; break;
 			case 3: cat = categoriaProducto.ELECTROHOGAR; break;
 			case 4: cat = categoriaProducto.HERRAMIENTAS; break;
@@ -141,7 +141,7 @@ public class Main {
 			double precio = validarDouble("Ingrese su nuevo precio unitario: ");
 			int numero = menuCategoria();
 			switch (numero) {
-				case 1: cat = categoriaProducto.TELEFONO; break;
+				case 1: cat = categoriaProducto.TELEFONIA; break;
 				case 2: cat = categoriaProducto.INFORMATICA; break;
 				case 3: cat = categoriaProducto.ELECTROHOGAR; break;
 				case 4: cat = categoriaProducto.HERRAMIENTAS; break;

@@ -8,7 +8,7 @@ public class Producto {
 	private origenFabricacion origen;
 	
 	public enum categoriaProducto{
-		TELEFONO, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS
+		TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS
 	}
 	
 	public enum origenFabricacion {
@@ -67,11 +67,11 @@ public class Producto {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Codigo del Producto: ").append(getCodigo());
-		sb.append("Descripcion del Producto: ").append(getDescripcion());
-		sb.append("Precio Unitario del Producto: ").append(getPrecioUnitario());
-		sb.append("Categoria del Producto: ").append(getCategoria());
-		sb.append("Origen del Producto: ").append(getOrigen());
+		sb.append("\nCodigo del Producto: ").append(getCodigo());
+		sb.append("\nDescripcion del Producto: ").append(getDescripcion());
+		sb.append("\nPrecio Unitario del Producto: ").append(getPrecioUnitario());
+		sb.append("\nCategoria del Producto: ").append(getCategoria());
+		sb.append("\nOrigen del Producto: ").append(getOrigen());
 		return sb.toString();
 	}
 	
