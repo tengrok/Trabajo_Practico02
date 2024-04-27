@@ -2,22 +2,19 @@ package ar.edu.unju.fi.ejercicio4.model;
 
 import java.time.LocalDate;
 
+import ar.edu.unju.fi.ejercicio4.constantes.Posicion;
+
 public class Jugador {
 	private String nombre;
 	private String apellido;
 	private LocalDate fechaNacimiento;
 	private String nacionalidad;
-	private float estatura;
-	private float peso;
-	private String posicion;
+	private double estatura;
+	private double peso;
+	private Posicion posicion;
 	
-	public Jugador() {
-		
-	}
-	
-	public Jugador(String nombre, String apellido, LocalDate fechaNacimiento, String nacionalidad, float estatura,
-			float peso, String posicion) {
-		
+	public Jugador(String nombre, String apellido, LocalDate fechaNacimiento, String nacionalidad, double estatura,
+			double peso, Posicion posicion) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
@@ -31,58 +28,72 @@ public class Jugador {
 		return nombre;
 	}
 
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 
 	public String getApellido() {
 		return apellido;
 	}
 
+
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+
 
 	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
+
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+
 
 	public String getNacionalidad() {
 		return nacionalidad;
 	}
 
+
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
 
-	public float getEstatura() {
+
+	public double getEstatura() {
 		return estatura;
 	}
 
-	public void setEstatura(float estatura) {
+
+	public void setEstatura(double estatura) {
 		this.estatura = estatura;
 	}
 
-	public float getPeso() {
+
+	public double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(float peso) {
+
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 
-	public String getPosicion() {
+
+	public Posicion getPosicion() {
 		return posicion;
 	}
 
-	public void setPosicion(String posicion) {
+
+	public void setPosicion(Posicion posicion) {
 		this.posicion = posicion;
 	}
-	
+
+
 	public int calcularEdad() {
 		return LocalDate.now().getYear() - getFechaNacimiento().getYear();
 	}
