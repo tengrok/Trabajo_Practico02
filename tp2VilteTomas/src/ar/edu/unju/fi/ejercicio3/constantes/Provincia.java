@@ -2,7 +2,12 @@ package ar.edu.unju.fi.ejercicio3.constantes;
 
 
 public enum Provincia {
-	JUJUY(811611,53000000), SALTA(1441351,120000000), TUCUMAN(1731820,22524), CATAMARCA(429562,102602), LARIOJA(383865,89680), SANTIAGODELESTERO(1060906,136351);
+	JUJUY(811611,53219), 
+	SALTA(1441351,155488), 
+	TUCUMAN(1731820,22524), 
+	CATAMARCA(429562,102602), 
+	LARIOJA(383865,89680), 
+	SANTIAGODELESTERO(1060906,136351);
 	
 	private double cantidadPoblacion;
 	private double superficie;
@@ -31,6 +36,5 @@ public enum Provincia {
 	public double densidad() {
 		return getCantidadPoblacion() / getSuperficie();
 	}
-	
 	
 }
