@@ -17,6 +17,30 @@ public class PagoTarjeta implements Pago {
 		this.montoPagado = montoPagado;
 	}
 
+	public String getNumeroTarjeta() {
+		return numeroTarjeta;
+	}
+
+	public void setNumeroTarjeta(String numeroTarjeta) {
+		this.numeroTarjeta = numeroTarjeta;
+	}
+
+	public LocalDate getFechaPago() {
+		return fechaPago;
+	}
+
+	public void setFechaPago(LocalDate fechaPago) {
+		this.fechaPago = fechaPago;
+	}
+
+	public double getMontoPagado() {
+		return montoPagado;
+	}
+
+	public void setMontoPagado(double montoPagado) {
+		this.montoPagado = montoPagado;
+	}
+
 	@Override
 	public void realizarPago(double monto) {
 
@@ -24,7 +48,9 @@ public class PagoTarjeta implements Pago {
 
 	@Override
 	public void imprimirRecibo() {
-		
+		System.out.println("\nNumero de Tarjeta: "+getNumeroTarjeta());
+		System.out.println("\nFecha de Pago "+getFechaPago());
+		System.out.println("\nMonto Pagado: "+getMontoPagado());
 	}
 
 }

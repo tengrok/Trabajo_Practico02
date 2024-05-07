@@ -6,6 +6,7 @@ public class Producto {
 	private double precioUnitario;
 	private categoriaProducto categoria;
 	private origenFabricacion origen;
+	private boolean estado;
 	
 	public enum categoriaProducto{
 		TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS
@@ -14,16 +15,18 @@ public class Producto {
 	public enum origenFabricacion {
 		ARGENTINA, CHILE, BRASIL, URUGUAY
 	}
-
+	
 	public Producto(int codigo, String descripcion, double precioUnitario, categoriaProducto categoria,
-			origenFabricacion origen) {
+			origenFabricacion origen, boolean estado) {
+		super();
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.categoria = categoria;
 		this.origen = origen;
+		this.estado = estado;
 	}
-	
+
 	public int getCodigo() {
 		return codigo;
 	}
@@ -64,6 +67,14 @@ public class Producto {
 		this.origen = origen;
 	}
 
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
@@ -72,6 +83,7 @@ public class Producto {
 		sb.append("\nPrecio Unitario del Producto: ").append(getPrecioUnitario());
 		sb.append("\nCategoria del Producto: ").append(getCategoria());
 		sb.append("\nOrigen del Producto: ").append(getOrigen());
+		sb.append("\nEstado :").append(estado);
 		return sb.toString();
 	}
 }
